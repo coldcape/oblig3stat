@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>oppgave10.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6897bb;}
+.s3 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+oppgave10.py</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">scipy.stats </span><span class="s0">as </span><span class="s1">stats</span>
+<span class="s0">import </span><span class="s1">numpy </span><span class="s0">as </span><span class="s1">np</span>
+<span class="s0">import </span><span class="s1">matplotlib.pyplot </span><span class="s0">as </span><span class="s1">plt</span>
+
+<span class="s1">forventnings_verdi = </span><span class="s2">760</span>
+<span class="s1">standard_avvik = </span><span class="s2">10</span>
+
+
+<span class="s1">x = np.arange(</span><span class="s2">720</span><span class="s0">, </span><span class="s2">800 </span><span class="s1">+ </span><span class="s2">1</span><span class="s1">)</span>
+
+<span class="s1">y = stats.norm.pdf(x = x</span><span class="s0">, </span><span class="s1">loc = forventnings_verdi</span><span class="s0">, </span><span class="s1">scale = standard_avvik)</span>
+
+<span class="s1">plt.plot(x</span><span class="s0">, </span><span class="s1">y)</span>
+<span class="s1">plt.xlabel(</span><span class="s3">&quot;x&quot;</span><span class="s1">)</span>
+<span class="s1">plt.ylabel(</span><span class="s3">&quot;f(x)&quot;</span><span class="s1">)</span>
+<span class="s1">plt.title(</span><span class="s3">&quot;Normalfordeling&quot;</span><span class="s1">)</span>
+
+
+<span class="s1">plt.show()</span>
+</pre>
+</body>
+</html>
